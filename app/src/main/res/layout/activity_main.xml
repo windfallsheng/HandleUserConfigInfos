@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+    <RelativeLayout style="@style/setting_item_layout_style">
+
+        <TextView
+            style="@style/setting_item_text_style"
+            android:layout_centerInParent="true"
+            android:text="@string/settings_center"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/setting_item_layout_style"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            style="@style/setting_item_text_style"
+            android:layout_centerInParent="true"
+            android:text="@string/sys_settings" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/setting_item_layout_style"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            style="@style/setting_item_text_style"
+            android:text="@string/notify" />
+
+        <com.windfallsheng.handleuserconfiginfos.widget.SwitchButton
+            android:id="@+id/switchbutton_notify"
+            android:layout_width="55dp"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:sb_background="#E5E5E5"
+            app:sb_checked_color="#4BD763"
+            app:sb_checkline_color="#FFFFFF"
+            app:sb_show_indicator="false" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview_notify_status"
+        style="@style/setting_item_text_status_style" />
+
+    <RelativeLayout
+        style="@style/setting_item_layout_style"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            style="@style/setting_item_text_style"
+            android:layout_centerInParent="true"
+            android:text="@string/user_settings" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/setting_item_layout_style"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            style="@style/setting_item_text_style"
+            android:text="@string/voice" />
+
+        <com.windfallsheng.handleuserconfiginfos.widget.SwitchButton
+            android:id="@+id/switchbutton_voice"
+            android:layout_width="55dp"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:sb_background="#E5E5E5"
+            app:sb_checked_color="#4BD763"
+            app:sb_checkline_color="#FFFFFF"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview_voice_status"
+        style="@style/setting_item_text_status_style" />
+
+    <RelativeLayout
+        style="@style/setting_item_layout_style"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            style="@style/setting_item_text_style"
+            android:text="@string/vibrate" />
+
+        <com.windfallsheng.handleuserconfiginfos.widget.SwitchButton
+            android:id="@+id/switchbutton_vibrate"
+            android:layout_width="55dp"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:sb_background="#E5E5E5"
+            app:sb_checked_color="#4BD763"
+            app:sb_checkline_color="#FFFFFF"
+            app:sb_show_indicator="false" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview_vibrate_status"
+        style="@style/setting_item_text_status_style" />
+
+</LinearLayout>

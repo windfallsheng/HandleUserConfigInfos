@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HandleUserConfigInfos</string>
+    <string name="settings_center">设置中心</string>
+    <string name="user_settings">用户设置</string>
+    <string name="sys_settings">应用设置</string>
+    <string name="notify">通知</string>
+    <string name="voice">声音</string>
+    <string name="vibrate">震动</string>
+    <string name="config_delete">该开关配置信息已删除</string>
+</resources>
