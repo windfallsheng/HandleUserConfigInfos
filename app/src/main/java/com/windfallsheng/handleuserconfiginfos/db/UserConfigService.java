@@ -58,10 +58,13 @@ public class UserConfigService {
         if (tableVersionEntity == null) {
             List<UserConfigEntity> newUserConfigList = parseNewUserConfigList();
             // 剔除不需要新增或者修改的对象
-            for (int i = 0; i < newUserConfigList.size(); i++) {
+            int size = newUserConfigList.size();
+            for (int i = 0; i < size; i++) {
                 UserConfigEntity userConfigEntity = newUserConfigList.get(i);
                 if (userConfigEntity.getOperationType() != Constants.USER_CONFIG_FIELD_OPERATION_TYPE_INSERT_OR_UPDATE) {
                     newUserConfigList.remove(i);
+                    i--;
+                    size--;
                 }
             }
             UserConfigManager.getInstance().insertUserConfigList(newUserConfigList);
