@@ -42,7 +42,7 @@ public class TableVersionManager {
     public void insertOrReplaceTableVersion(TableVersionEntity tableVersion) {
         Log.d(TAG, "insertOrReplaceTableVersion#tableVersion=" + tableVersion);
         if (tableVersion == null) {
-            return;
+            throw new IllegalArgumentException("tableVersion = null");
         }
         long putId = mUserConfigEntityBox
                 .put(tableVersion);

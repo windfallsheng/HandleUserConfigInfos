@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         mTvVibrate = findViewById(R.id.textview_vibrate_status);
 
         // 初始化相关配置信息
-        UserConfigService.getInstance(this).initUserConfig();
+        UserConfigService userConfigService = new UserConfigService(this);
+        userConfigService.initUserConfig();
 
         // 通知设置
         final UserConfigEntity notifyConfig = UserConfigManager.getInstance().queryUserConfigByKey(Constants.CONFIG_KEY_NOTIFY);

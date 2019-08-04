@@ -24,21 +24,11 @@ public class UserConfigService {
     private static final String TAG = UserConfigService.class.getSimpleName();
     private Context mContext;
 
-    private static volatile UserConfigService instance = null;
-
-    private UserConfigService(Context context) {
-        this.mContext = context;
-    }
-
-    public static UserConfigService getInstance(Context context) {
-        if (instance == null) {
-            synchronized (UserConfigService.class) {
-                if (instance == null) {
-                    instance = new UserConfigService(context.getApplicationContext());
-                }
-            }
+    public UserConfigService(Context context) {
+        if (context == null) {
+            throw new IllegalArgumentException("context = null");
         }
-        return instance;
+        this.mContext = context.getApplicationContext();
     }
 
     /**
